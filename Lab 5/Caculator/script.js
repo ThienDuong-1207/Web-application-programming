@@ -1,5 +1,6 @@
-document.getElementById("calculateBtn").addEventListener("click", calculate);
-
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("calculateBtn").addEventListener("click", calculate);
+  });
 function calculate(){
     const num1 = parseFloat(document.getElementById("num1").value);
     const num2 = parseFloat(document.getElementById("num2").value);
