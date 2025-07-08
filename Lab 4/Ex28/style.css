@@ -1,14 +1,14 @@
-.container{
-    width: 80px;
+.container {
+    width: 80vw;
     height: 50vh;
     background-color: #f0f0f0;
     padding: 2rem;
 }
 
-h1{
+h1 {
     font-size: 3rem;
 }
 
-.text{
+.text {
     font-size: 5vw;
 }

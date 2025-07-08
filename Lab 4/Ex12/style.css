@@ -1,12 +1,12 @@
-:root{
-    --heading-color:#eb3b3b;
-    --text-color:#3bb732;
+:root {
+    --heading-color: #333333;
+    --text-color: #404040;
 }
 
-h1{
-    color: var(--heading-color);
+h1 {
+    color: var(--heading-color) ;
 }
 
-p{
+p {
     color: var(--text-color);
 }

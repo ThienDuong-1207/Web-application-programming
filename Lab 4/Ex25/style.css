@@ -1,11 +1,11 @@
-.box{
+.box {
     width: 500px;
     height: 250px;
     position: relative;
     background-color: #ccc;
 }
 
-.box-child{
+.box-child {
     background-color: rgba(128, 0, 128, 0.5);
     position: absolute;
     top: 0;

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhập Thông Tin Sinh Viên</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 25px;
+            color: #333;
+        }
+        form div {
+            margin-bottom: 10px;
+        }
+        label {
+            display: inline-block; /* Để label và input trên cùng dòng */
+            width: 80px; /* Chiều rộng cố định cho label */
+            margin-right: 10px;
+            text-align: left; /* Căn trái label */
+            font-weight: bold; /* Làm đậm chữ label */
+        }
+        input[type="text"],
+        input[type="number"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Để padding không làm tăng tổng chiều rộng */
+            width: 200px; /* Chiều rộng ô input */
+            font-size: 1em;
+        }
+        input:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+        button {
+            background-color: #4CAF50; /* Màu xanh lá cây cho nút Submit */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            margin-top: 15px; /* Khoảng cách trên nút */
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nhập Thông Tin Sinh Viên</h1>
+    <form action="/show_details" method="post">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" value="MVL">
+        </div>
+        <div>
+            <label for="physics">Physics</label>
+            <input type="number" id="physics" name="physics" value="0">
+        </div>
+        <div>
+            <label for="chemistry">Chemistry</label>
+            <input type="number" id="chemistry" name="chemistry" value="0">
+        </div>
+        <div>
+            <label for="maths">Maths</label>
+            <input type="number" id="maths" name="maths" value="0">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

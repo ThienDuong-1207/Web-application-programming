@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Items for Sale</h2>
+  <div class="item">
+    Item A - $10 <button class="button" onclick="addToCart('Item A', 10)">Add</button>
+  </div>
+  <div class="item">
+    Item B - $15 <button class="button" onclick="addToCart('Item B', 15)">Add</button>
+  </div>
+
+  <div class="cart">
+    <h3>Shopping Cart</h3>
+    <ul id="cartItems"></ul>
+    <strong>Total: $<span id="total">0</span></strong>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-.button{
+.button {
     padding: 8px 16px;
     color: #fff;
     background-color: #f05123;
@@ -6,7 +6,7 @@
 }
 
 .button:hover,
-.button:focus{
+.button:focus {
     background-color: rgba(240, 81, 35, 0.8);
     outline: 2px solid #fff;
 }

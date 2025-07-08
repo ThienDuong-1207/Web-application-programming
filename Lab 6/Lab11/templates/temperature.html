@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature Converter</title>
+    <style>
+        body {
+            background-color: #e0f7fa;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, select, button {
+            margin: 10px 0;
+            padding: 8px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Temperature Converter</h1>
+    <form method="POST">
+        <label for="temperature">Enter temperature:</label><br>
+        <input type="text" name="temperature" id="temperature" required><br>
+        
+        <label for="conversion">Conversion type:</label><br>
+        <select name="conversion" id="conversion">
+            <option value="c_to_f">Celsius to Fahrenheit</option>
+            <option value="f_to_c">Fahrenheit to Celsius</option>
+        </select><br>
+        
+        <button type="submit">Convert</button>
+    </form>
+
+    {% if result %}
+        <h2>{{ result }}</h2>
+    {% endif %}
+</body>
+</html>

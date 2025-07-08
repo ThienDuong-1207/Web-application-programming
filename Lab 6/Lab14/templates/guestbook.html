@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guestbook</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 40px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 1em;
+        }
+
+        .entry {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 5px solid #007BFF;
+            border-radius: 5px;
+        }
+
+        .entry h3 {
+            margin: 0 0 5px 0;
+        }
+
+        .entry p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Guestbook</h1>
+
+    <form method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Add Entry</button>
+    </form>
+
+    {% for entry in entries %}
+        <div class="entry">
+            <h3>{{ entry.name }}</h3>
+            <p>{{ entry.message }}</p>
+        </div>
+    {% else %}
+        <p>No entries yet. Be the first to sign!</p>
+    {% endfor %}
+</body>
+</html>

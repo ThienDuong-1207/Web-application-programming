@@ -1,25 +1,30 @@
 body{
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
-p{
+p {
     font-size: 16px;
     line-height: 1.6;
 }
 
-a{
-    display: inline-block;
+a {
+    /* Cho phép phần tử 
+    <a> có thể đặt padding, width, height 
+    như một khối (khác với mặc định inline). */
+    display: inline-block; 
     margin-top: 16px;
     padding: 8px 16px;
     border: 2px solid #000;
     border-radius: 999px;
     color: #000;
+    /* Xóa gạch dưới mặc định của liên kết. */
     text-decoration: none;
     font-weight: 600;
-    transition: ease .25s;
+    /* Tạo hiệu ứng chuyển mượt khi hover, kéo dài 0.25 giây. */
+    transition: ease 0.25s;
 }
 
-a:hover{
+a:hover {
     color: #fff;
     background-color: #000;
 }

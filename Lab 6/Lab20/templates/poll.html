@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Voting Poll</title>
+</head>
+<body>
+    <h1>Vote for Your Favorite!</h1>
+    <form method="post">
+        <input type="radio" id="cats" name="animal" value="Cat" required>
+        <label for="cats">Cats</label><br>
+        <input type="radio" id="dogs" name="animal" value="Dog">
+        <label for="dogs">Dogs</label><br>
+        <button type="submit">Vote</button>
+    </form>
+
+    <h2>Results</h2>
+    <table border="1">
+        <tr>
+            <th>Option</th>
+            <th>Votes</th>
+            <th>Percentage</th>
+        </tr>
+        {% for animal, count in votes.items() %}
+        <tr>
+            <td>{{ animal }}</td>
+            <td>{{ count }}</td>
+            <td>{{ "%.2f"|format(percentages[animal]) }}%</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
